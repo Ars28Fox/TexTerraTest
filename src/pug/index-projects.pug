@@ -1,0 +1,20 @@
+extends extends/_layout
+
+block body
+	.example-projects
+		.example-projects__wrapper
+			.example-projects__logo
+				a.logo(href="index.html")
+					img.logo__image(src='images/example-logo.png')
+			.example-search
+				input.example-search__input(placeholder="Поиск проекта")
+			.example-projects__row
+				for _ in Array(10)
+					.example-projects__col
+						a.example-card.example-card--hovered(href="index.html")
+							.example-card__image(style="background-image: url(images/example-logo.png)")
+								.example-card__button Смотреть верстку
+							.example-card__content
+								.example-card__caption Название проекта
+								span Обновлено 14.12.16 / 15.43
+
