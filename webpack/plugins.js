@@ -7,25 +7,25 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const context = path.resolve(__dirname, '../');
 
-const languageFolders = ['en', 'cn', 'es'];
+// const languageFolders = ['en', 'cn', 'es'];
 
 /* eslint-disable implicit-arrow-linebreak */
 const getPugFiles = (folder = '') =>
 	fs.readdirSync(path.resolve(__dirname, `../src/pug/${folder}`)).filter(fileName => fileName.endsWith('.pug'));
 
 const pages = getPugFiles();
-const includes = getPugFiles('includes');
+// const includes = getPugFiles('includes');
 
-const languageDirectroies = languageFolders.reduce((acc, folder) => {
-	const pagesInLangDir = fs
-		.readdirSync(path.resolve(__dirname, `../src/pug/${folder}`))
-		.filter(fileName => fileName.endsWith('pug'));
-	const resultObj = {
-		folder,
-		pages: pagesInLangDir,
-	};
-	return [...acc, resultObj];
-}, []);
+// const languageDirectroies = languageFolders.reduce((acc, folder) => {
+// 	const pagesInLangDir = fs
+// 		.readdirSync(path.resolve(__dirname, `../src/pug/${folder}`))
+// 		.filter(fileName => fileName.endsWith('pug'));
+// 	const resultObj = {
+// 		folder,
+// 		pages: pagesInLangDir,
+// 	};
+// 	return [...acc, resultObj];
+// }, []);
 
 const plugins = [
 	new CleanWebpackPlugin({
@@ -57,25 +57,25 @@ const plugins = [
 				filename: `${page.replace(/\.pug/, '.html')}`,
 			})
 	),
-	...includes.map(
-		page =>
-			new HtmlWebpackPlugin({
-				template: `./src/pug/includes/${page}`,
-				filename: `includes/${page.replace(/\.pug/, '.html')}`,
-				inject: false,
-			})
-	),
-	...languageDirectroies.reduce((acc, pageDir) => {
-		const folderName = pageDir.folder.replace(/\.pug/, '');
-		const pluginForEachPageInFolder = pageDir.pages.map(
-			pageName =>
-				new HtmlWebpackPlugin({
-					template: `./src/pug/${folderName}/${pageName}`,
-					filename: `${folderName}/${pageName.replace(/\.pug/, '.html')}`,
-				})
-		);
-		return [...acc, ...pluginForEachPageInFolder];
-	}, []),
+	// ...includes.map(
+	// 	page =>
+	// 		new HtmlWebpackPlugin({
+	// 			template: `./src/pug/includes/${page}`,
+	// 			filename: `includes/${page.replace(/\.pug/, '.html')}`,
+	// 			inject: false,
+	// 		})
+	// ),
+	// ...languageDirectroies.reduce((acc, pageDir) => {
+	// 	const folderName = pageDir.folder.replace(/\.pug/, '');
+	// 	const pluginForEachPageInFolder = pageDir.pages.map(
+	// 		pageName =>
+	// 			new HtmlWebpackPlugin({
+	// 				template: `./src/pug/${folderName}/${pageName}`,
+	// 				filename: `${folderName}/${pageName.replace(/\.pug/, '.html')}`,
+	// 			})
+	// 	);
+	// 	return [...acc, ...pluginForEachPageInFolder];
+	// }, []),
 ];
 
 module.exports = plugins;

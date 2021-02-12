@@ -1,0 +1,40 @@
+.footer-nav
+    @media mobile
+        order 2
+    &__list
+        display flex
+        margin 0 -21px
+        font-weight 500
+        font-size 12px
+        line-height 15px
+        @media tablet
+            margin 0 -14px
+        @media mobile
+            flex-wrap wrap
+            margin-top 25px
+    &__item
+        margin: 0 21px
+        @media tablet
+            margin 0 14px
+        @media mobile
+            margin-bottom 10px
+    &__link
+        display block
+        position: relative;
+        text-align center
+        color dark-grey-color
+        &:hover
+            font-weight 700
+            color light-purple-color
+        &.active
+            font-weight 700
+            color light-purple-color
+        &::before
+            display: block;
+            content: attr(title)
+            font-weight bold
+            height 0
+            overflow hidden
+            visibility hidden
+        @media mobile
+            text-transform uppercase

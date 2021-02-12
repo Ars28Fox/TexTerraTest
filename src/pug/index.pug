@@ -1,41 +1,237 @@
 extends extends/_layout
 
-block body
-	.example-projects
-		.example-header
-			.example-header__top
-				.example-header__bg(style="background-image: url(images/example-logo.png)")
-				.row
-					.col-12
-						h1.example-header__title Название проекта
-						
-			.row
-				.col-12
-					.example-header__bottom
-						.example-card.example-card--offset
-							.example-card__image(style="background-image: url(images/example-logo.png)")
-							.example-card__content
-								.example-card__caption 7 страниц
-								-var date = new Date()
-								span Обновлено #{date.getDate()}.#{date.getMonth()}.#{date.getFullYear()} / #{date.getHours()}.#{date.getMinutes()}
-						//- только для администратора
-						//- a.example-nav(href="index-projects.html") Назад к проектам
-		div
-			.row
-				.col-12
-					h2.h1.mt0 Страницы
-					p.example-subcaption Для перехода к странице кликните по ссылкам ниже
-					h3.example-caption Стили
-			ul.example-list
-				li: a.example-list__link(href="_style-guide.html") Страница стилей #[span.example-copy.js-copy-link]
-			.row
-				.col-12
-					h3.example-caption Список страниц
-			ul.example-list
-				li: a.example-list__link(href="main.html") Главная #[span.example-copy.js-copy-link]
-				li: a.example-list__link(href="404.html") 404 #[span.example-copy.js-copy-link]
-				//- можно делать вложенную структуру
-				//-li
-					a.example-list__link(href="#") Главная #[span.example-copy.js-copy-link]
-					ul.example-list
-						li: a.example-list__link(href="#") Главная #[span.example-copy.js-copy-link]
+block content
+	.container
+		section.intro
+			.swiper-container.intro__swiper
+				.swiper-wrapper.intro__swiper-wrap
+					.swiper-slide.intro__slide
+						.intro__slide-desc
+							span.annotation Plan your life
+							h2.intro__slide-title Increase your #[strong productivity]
+							p.intro__slide-text
+								| Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
+							button.intro__slide-btn(type="button")
+								svg(width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg")
+									circle(cx="26" cy="26" r="26" fill="white")
+									path(d="M31.2308 25.1767C32.2564 25.7649 32.2564 27.2351 31.2308 27.8233L24.3077 31.793C23.2821 32.3811 22 31.646 22 30.4698V22.5302C22 21.354 23.2821 20.6189 24.3077 21.207L31.2308 25.1767Z" fill="#5E81FF")
+						img.intro__slide-img(src="images/slide-img1.svg", alt="Productivity graph")
+					.swiper-slide.intro__slide
+						.intro__slide-desc
+							span.annotation Plan your life
+							h2.intro__slide-title Increase your #[strong productivity]
+							p.intro__slide-text
+								| Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
+							button.intro__slide-btn(type="button")
+								svg(width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg")
+									circle(cx="26" cy="26" r="26" fill="white")
+									path(d="M31.2308 25.1767C32.2564 25.7649 32.2564 27.2351 31.2308 27.8233L24.3077 31.793C23.2821 32.3811 22 31.646 22 30.4698V22.5302C22 21.354 23.2821 20.6189 24.3077 21.207L31.2308 25.1767Z" fill="#5E81FF")
+						img.intro__slide-img(src="images/slide-img1.svg", alt="Productivity graph")
+					.swiper-slide.intro__slide
+						.intro__slide-desc
+							span.annotation Plan your life
+							h2.intro__slide-title Increase your #[strong productivity]
+							p.intro__slide-text
+								| Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
+							button.intro__slide-btn(type="button")
+								svg(width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg")
+									circle(cx="26" cy="26" r="26" fill="white")
+									path(d="M31.2308 25.1767C32.2564 25.7649 32.2564 27.2351 31.2308 27.8233L24.3077 31.793C23.2821 32.3811 22 31.646 22 30.4698V22.5302C22 21.354 23.2821 20.6189 24.3077 21.207L31.2308 25.1767Z" fill="#5E81FF")
+						img.intro__slide-img(src="images/slide-img1.svg", alt="Productivity graph")
+				.swiper-pagination.intro__swiper-pagination
+		section.features
+			.features__desc
+				span.annotation Desktop and mobile app
+				h2.medium-title.features__title #[strong Plan] and #[strong manage]
+				p.features__text
+					| Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum an expetenda consequat.
+				.features__buttons
+					button.btn.features__btn(type="button") View video
+						svg.features__btn-icon(width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+							path(d="M6 2.73354C6.66667 3.11844 6.66667 4.08069 6 4.46559L1.5 7.06367C0.833333 7.44857 0 6.96744 0 6.19764V1.00149C0 0.231691 0.833333 -0.249434 1.5 0.135467L6 2.73354Z" fill="white")
+					a.btn.features__link(href="#") See features
+				img.features__bg(src="images/features-bg.png", alt="Desktop and mobile view of our app")
+		section.hints
+			span.annotation Our resources
+			h2.small-title.hints__title Start reading our blog
+			.hints__swiper-outer
+				.swiper-container.hints__swiper
+					.swiper-wrapper.hints__swiper-wrap
+						.swiper-slide.hints__slide
+							.record
+								ul.record__gallery
+									li.record__gallery-item
+										a.record__gallery-link(href="images/record-img1-big.jpg" data-fancybox="gallery-1")
+											img(src="images/record-img1.jpg", alt="Image of laptop, notebook and pencil")
+									li.record__gallery-item
+										a.record__gallery-link.record__gallery-link--small(href="images/record-img2-big.jpg" data-fancybox="gallery-1")
+											img(src="images/record-img2.jpg", alt="Image of laptop from above")
+									li.record__gallery-item
+										a.record__gallery-link.record__gallery-link--small(href="images/record-img3-big.jpg" data-fancybox="gallery-1")
+											img(src="images/record-img3.jpg", alt="Image of a guy with a backpack")
+								.record__content
+									h3.medium-title.record__title How to start planning
+									p.record__text
+										| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...
+									.record__buttons
+										a.btn.record__link(href="#") Read now
+										button.btn.record__btn(type="button") Add to your bookmarks
+						.swiper-slide.hints__slide
+							.record
+								ul.record__gallery
+									li.record__gallery-item
+										a.record__gallery-link(href="images/record-img1-big.jpg" data-fancybox="gallery-2")
+											img(src="images/record-img1.jpg", alt="Image of laptop, notebook and pencil")
+									li.record__gallery-item
+										a.record__gallery-link.record__gallery-link--small(href="images/record-img2-big.jpg" data-fancybox="gallery-2")
+											img(src="images/record-img2.jpg", alt="Image of laptop from above")
+									li.record__gallery-item
+										a.record__gallery-link.record__gallery-link--small(href="images/record-img3-big.jpg" data-fancybox="gallery-2")
+											img(src="images/record-img3.jpg", alt="Image of a guy with a backpack")
+								.record__content
+									h3.medium-title.record__title How to start planning
+									p.record__text
+										| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...
+									.record__buttons
+										a.btn.record__link(href="#") Read now
+										button.btn.record__btn(type="button") Add to your bookmarks
+						.swiper-slide.hints__slide
+							.record
+								ul.record__gallery
+									li.record__gallery-item
+										a.record__gallery-link(href="images/record-img1-big.jpg" data-fancybox="gallery-3")
+											img(src="images/record-img1.jpg", alt="Image of laptop, notebook and pencil")
+									li.record__gallery-item
+										a.record__gallery-link.record__gallery-link--small(href="images/record-img2-big.jpg" data-fancybox="gallery-3")
+											img(src="images/record-img2.jpg", alt="Image of laptop from above")
+									li.record__gallery-item
+										a.record__gallery-link.record__gallery-link--small(href="images/record-img3-big.jpg" data-fancybox="gallery-3")
+											img(src="images/record-img3.jpg", alt="Image of a guy with a backpack")
+								.record__content
+									h3.medium-title.record__title How to start planning
+									p.record__text
+										| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...
+									.record__buttons
+										a.btn.record__link(href="#") Read now
+										button.btn.record__btn(type="button") Add to your bookmarks
+				.swiper-button-next.hints__arrow.hints__arrow--next
+				.swiper-button-prev.hints__arrow.hints__arrow--prev
+			.swiper-pagination.hints__swiper-pagination
+		section.quotes
+			.quotes__desc
+				span.annotation Testimonials
+				h2.medium-title.quotes__title Customers's quotes
+				p.quotes__text
+					| Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an.
+			.quotes__swiper-outer
+				.swiper-container.quotes__swiper
+					.swiper-wrapper.quotes__swiper-wrap
+						.swiper-slide.quotes__slide
+							blockquote.quote
+								p.quote__text
+									| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+								cite.quote__author
+									img(src="images/user-img.jpg", alt="User photo")
+						.swiper-slide.quotes__slide
+							blockquote.quote
+								p.quote__text
+									| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+								cite.quote__author
+									img(src="images/user-img.jpg", alt="User photo")
+						.swiper-slide.quotes__slide
+							blockquote.quote
+								p.quote__text
+									| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+								cite.quote__author
+									img(src="images/user-img.jpg", alt="User photo")
+						.swiper-slide.quotes__slide
+							blockquote.quote
+								p.quote__text
+									| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+								cite.quote__author
+									img(src="images/user-img.jpg", alt="User photo")
+						.swiper-slide.quotes__slide
+							blockquote.quote
+								p.quote__text
+									| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+								cite.quote__author
+									img(src="images/user-img.jpg", alt="User photo")
+						.swiper-slide.quotes__slide
+							blockquote.quote
+								p.quote__text
+									| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+								cite.quote__author
+									img(src="images/user-img.jpg", alt="User photo")
+						.swiper-slide.quotes__slide
+							blockquote.quote
+								p.quote__text
+									| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+								cite.quote__author
+									img(src="images/user-img.jpg", alt="User photo")
+						.swiper-slide.quotes__slide
+							blockquote.quote
+								p.quote__text
+									| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+								cite.quote__author
+									img(src="images/user-img.jpg", alt="User photo")
+						.swiper-slide.quotes__slide
+							blockquote.quote
+								p.quote__text
+									| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+								cite.quote__author
+									img(src="images/user-img.jpg", alt="User photo")
+					.swiper-pagination.quotes__swiper-pagination
+		section.faq
+			.faq__wrap
+				span.annotation Customer help
+				h2.small-title.faq__title Frequently asked questions
+				ul.faq__list
+					li.faq__item
+						h3.tiny-title.faq__item-title.js-accordion-toggle Reque insolens in vel?
+							svg.faq__icon(width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg")
+								path(d="M2 2L9 9L16 2" stroke="#8E96B7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round")
+						.faq__content.js-accordion-item
+							p.faq__content-text
+								| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+							a.btn.faq__item-link Go to documentation
+					li.faq__item
+						h3.tiny-title.faq__item-title.js-accordion-toggle Vis rebum error graecis ea, id sit postea accusamus?
+							svg.faq__icon(width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg")
+								path(d="M2 2L9 9L16 2" stroke="#8E96B7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round")
+						.faq__content.js-accordion-item
+							p.faq__content-text
+								| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+							a.btn.faq__item-link Go to documentation
+					li.faq__item
+						h3.tiny-title.faq__item-title.js-accordion-toggle Lorem repudiandae ne nec?
+							svg.faq__icon(width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg")
+								path(d="M2 2L9 9L16 2" stroke="#8E96B7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round")
+						.faq__content.js-accordion-item
+							p.faq__content-text
+								| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+							a.btn.faq__item-link Go to documentation
+					li.faq__item
+						h3.tiny-title.faq__item-title.js-accordion-toggle Ad dicit numquam vel. Et eos iudico feugait percipitur?
+							svg.faq__icon(width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg")
+								path(d="M2 2L9 9L16 2" stroke="#8E96B7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round")
+						.faq__content.js-accordion-item
+							p.faq__content-text
+								| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+							a.btn.faq__item-link Go to documentation
+					li.faq__item
+						h3.tiny-title.faq__item-title.js-accordion-toggle Sea no dico percipitur. Fierent constituam definitiones id eum?
+							svg.faq__icon(width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg")
+								path(d="M2 2L9 9L16 2" stroke="#8E96B7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round")
+						.faq__content.js-accordion-item
+							p.faq__content-text
+								| Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+							a.btn.faq__item-link Go to documentation
+		section.sign-up
+			.sign-up__wrap
+				.sign-up__desc
+					h2.sign-up__title Sign up for newsletter
+					p.sign-up__text
+						| Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.
+				form.sign-up__form(action="")
+					input.sign-up__input(type="email" placeholder="Email address")
+					button.btn.sign-up__btn(type="submit") Save me

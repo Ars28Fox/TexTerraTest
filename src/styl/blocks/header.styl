@@ -1,3 +1,47 @@
 .header
-	padding-top 20px
-	padding-bottom 20px
+	addFont()
+	@media mobile
+		position fixed
+		width 100%
+		background-color #fff
+		z-index 6
+	&__wrap
+		display flex
+		align-items center
+		position relative
+		padding 19px 117px
+		border-bottom 1px solid #d8e3fe
+		z-index 3
+		@media desc
+			padding 19px 80px
+		@media tablet
+			padding 19px 40px
+		@media mobile
+			flex-wrap wrap
+			padding 19px 25px
+	&__logo
+		flex-shrink 0
+		margin-right 73px
+		@media desc
+			margin-right 50px
+		@media tablet
+			margin-left 40px
+			margin-right 40px
+	&__social
+		margin 0 auto
+		@media mobile
+			order 3
+	&__login
+		margin-left 27px
+		border-radius 2px
+		color blue-color
+		background-color cloud-color
+		&:hover
+			color #fff
+			background-color deep-blue-color
+		&:active
+			opacity 0.5
+		@media tablet
+			margin-left 0
+		@media mobile
+			margin-left auto

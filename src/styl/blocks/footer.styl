@@ -1,0 +1,50 @@
+.footer
+    addFont()
+    &__wrap
+        display flex
+        align-items center
+        flex-wrap wrap
+        padding 93px 117px
+        @media desc
+            padding 60px 80px
+        @media tablet
+            padding 19px 40px
+        @media mobile
+            flex-wrap wrap
+            padding 19px 25px
+    &__logo
+        margin-right 73px
+        @media desc
+            margin-right 50px
+        @media tablet
+            margin-right 40px
+    &__social
+        margin-left auto
+        @media mobile
+            order 3
+    &__login
+        margin-left 27px
+        border-radius 2px
+        color blue-color
+        background-color cloud-color
+        &:hover
+            color #fff
+            background-color deep-blue-color
+        &:active
+            opacity 0.5
+        @media mobile
+            margin-left auto
+    &__copyright
+        width 100%
+        margin 28px 0 16px
+        addFont()
+        font-size 12px
+        font-weight 500
+        line-height 15px
+        letter-spacing 0.05em
+        @media tablet
+            margin 16px 0
+        @media mobile
+            order 4
+            margin 25px 0 15px
+

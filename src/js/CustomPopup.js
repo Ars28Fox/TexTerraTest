@@ -8,6 +8,7 @@ export default function createPopup(popupBackground, popupToggler, popupLoaded, 
 
 	const closePopup = () => {
 		$(popupBackground).removeClass('open');
+		$('.login-popup__sucsess').removeClass('active');
 		popup.removeClass('open');
 		enableBodyScroll(popup);
 		if (popupContentURL) {

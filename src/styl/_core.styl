@@ -10,8 +10,6 @@
  * {up(N)} — подняться выше по дереву на N
  * {end()} — повторяет последний элемент
 */
-use('nesting-tree-traversal.js')
-
 /** 
  * Основной шрифт сайта
  * обязательно БЕЗ кавычек
@@ -19,12 +17,17 @@ use('nesting-tree-traversal.js')
  * Если шрифт кастомный, то подключать в ./fonts.styl
  */
 fontFamily = Roboto
+secondFontFamily = Quicksand
 
 /** Ширина сайта */
-pageWidth = 1340px
+pageWidth = 1440px
 
 /** Ширина бокового меню */
 sideWidth = 300px
+
+/** Padding */
+
+padding = 20px
 
 /** 
  * Расстояние МЕЖДУ колонками
@@ -37,9 +40,9 @@ colGap = 40px
  * обычные переменные со значением строки
  * использование: @media mobile
  */
-descSize = 1024px
-tabletSize = 960px
-mobileSize = 560px
+descSize = 1439px
+tabletSize = 1023px
+mobileSize = 767px
 smallSize = 420px
 
 page = s("only screen and (max-width: %s)", (pageWidth + 2 * colGap))

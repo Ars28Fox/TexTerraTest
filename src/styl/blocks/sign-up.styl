@@ -1,0 +1,78 @@
+.sign-up
+    padding 119px 0
+    background-color #FCFDFF
+    border-bottom 1px solid #d8e3fe
+    @media tablet
+        padding 70px 0
+    @media mobile
+        padding 70px 15px
+    &__wrap
+        display flex
+        justify-content space-between
+        align-items center
+        width 100%
+        max-width 887px
+        margin 0 auto
+        @media tablet
+            flex-wrap wrap
+            max-width 477px
+    &__desc
+        width 100%
+        max-width 330px
+    &__title
+        margin 0
+        addFont()
+        font-size 18px
+        font-weight 700
+        line-height 23px
+        color dark-blue-color
+    &__text
+        margin 12px 0 6px
+        font-size 14px
+        line-height 27px
+    &__form
+        display flex
+        width 100%
+        max-width 477px
+        @media tablet
+            margin-top 20px
+        @media mobile
+            flex-direction column
+    &__input
+        width 100%
+        border none
+        border-radius 5px
+        padding 21px 23px
+        addFont()
+        font-size 13px
+        font-weight 700
+        line-height 17px
+        background-color #EFEFF7
+        color #7A85AD
+        outline none
+        transition .3s
+        &:hover
+            background-color rgba(#808080, 0.2)
+        &:focus
+            background-color rgba(#808080, 0.2)
+            color #495274;
+    &__btn
+        flex-shrink 0
+        width 100%
+        max-width 184px
+        margin-left 14px
+        padding-top 21px
+        padding-bottom 21px
+        border-radius 5px
+        box-shadow 0px 5px 15px rgba(116, 104, 255, 0.2)
+        background-color deep-blue-color
+        color #fff
+        &:hover
+           background-color cloud-color
+           color deep-blue-color
+        &:active
+            opacity 0.5
+        @media mobile
+            margin-top 20px
+            margin-left 0
+

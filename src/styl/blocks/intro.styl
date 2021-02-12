@@ -1,0 +1,118 @@
+.intro
+    &__swiper
+        position relative
+        width 100%
+    &__slide
+        min-height 570px
+        position: relative;
+        padding 92px 0
+        background linear-gradient(180deg, #f4f7ff 0%, #f1f5ff 100%)
+        @media desc
+            padding 60px 0
+        @media tablet
+            min-height 500px
+            padding 40px 0 0
+        @media mobile
+            min-height 570px
+            padding 30px 0 0
+            overflow hidden
+    &__slide-desc
+        display flex
+        flex-direction column
+        align-items center
+        position: relative;
+        width 100%
+        max-width 600px
+        margin 0 auto
+        text-align center
+        z-index: 2;
+    &__slide-title
+        margin 16px 0 22px
+        addFont()
+        font-size 48px
+        font-weight 300
+        line-height 60px
+        color dark-blue-color
+        & strong
+            font-weight 500
+        @media mobile
+            max-width 290px 
+            font-size 40px
+            line-height 50px
+            margin 16px 0 30px
+    &__slide-text
+        margin 0
+        max-width 500px
+        @media mobile
+           max-width 290px
+           line-height 24px
+    &__slide-btn
+        display flex
+        justify-content center
+        align-items center
+        position: relative;
+        width 100%
+        max-width 52px
+        margin-top 20px
+        border none
+        border-radius 50%
+        box-shadow 0px 10px 50px rgba(201, 209, 231, 0.6)
+        padding 0
+        background-color transparent
+        cursor pointer
+        outline none
+        transition: all .3s;
+        &:hover::before,
+        &:hover::after
+            content ""
+            position absolute
+            border 1px solid blue-color
+            left -15px
+            right -15px
+            top -15px
+            bottom -15px
+            border-radius 50%
+            animation pulse 1.7s linear infinite
+            opacity 0
+            z-index: -1;
+        &:hover::after
+            animation-delay .5s
+        &:active
+            opacity 0.5
+        &:active::before,
+        &:active::after
+            animation none
+        @media mobile
+            margin-top 30px
+    &__slide-img
+        object-fit cover
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        @media tablet
+            object-fit contain
+            top 40px
+        @media mobile
+            top 60px
+            transform scale(2)
+    &__swiper-pagination.swiper-pagination-bullets
+        display flex
+        justify-content center
+        bottom 28px
+        & .swiper-pagination-bullet
+            margin 0 6px
+            background-color #d1d6e3
+            outline none
+        & .swiper-pagination-bullet-active
+            background-color #5283ff
+@keyframes pulse
+    0%
+        transform scale(0.5)
+        opacity 0
+    50%
+        opacity: 0.5;
+    100%
+        transform scale(1.1)
+        opacity 0

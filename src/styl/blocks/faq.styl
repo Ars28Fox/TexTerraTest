@@ -1,0 +1,87 @@
+.faq
+    padding 176px 0
+    border-bottom 1px solid #d8e3fe
+    @media desc
+        padding 100px 0
+    @media tablet
+        padding 50px 15px 70px
+    &__wrap
+        display flex
+        flex-direction column
+        align-items center
+        width 100%
+        max-width 743px
+        margin 0 auto
+    &__title
+        margin 0
+        margin-top 20px
+    &__list
+        width 100%
+        margin-top 51px
+        @media tablet
+            margin-top 30px
+    &__item
+        display flex
+        flex-direction column
+        border-bottom 1px solid #d8e3fe
+        padding 14px 15px 14px 22px
+        &.active>.faq__content
+            display flex
+            justify-content space-between
+            align-items flex-start
+            @media mobile
+                flex-wrap wrap
+        &.active
+            .faq__item-title
+                font-weight 700
+                color #495274
+                & .faq__icon
+                    transform-origin center
+                    transform translateY(-50%) rotate(180deg)
+                & path
+                    stroke #495274
+        @media mobile
+            padding 15px 0
+    &__item-title
+        position relative
+        width 100%
+        margin 0
+        padding 15px 40px
+        cursor pointer
+        &:hover
+            font-weight 700
+            color #495274
+            & path
+                stroke #495274
+        @media mobile
+            padding 15px 10px 15px 40px
+    &__icon
+        position absolute
+        left 0
+        top 50%
+        transform translateY(-50%)
+        transition .3s
+    &__content
+        display none
+        width 100%
+        padding 7px 0 25px 58px
+        font-size 14px
+        line-height 27px
+        letter-spacing 0.03em
+        @media mobile
+            padding 7px 10px 25px 40px
+    &__content-text
+        width 100%
+        max-width 400px
+        margin 0
+    &__item-link
+        width 100%
+        max-width 195px
+        margin-top 10px
+        border-radius 2px
+        background-color #E8ECF4
+        color #7382A3
+        &:hover
+           background-color cloud-color
+           color blue-color
+

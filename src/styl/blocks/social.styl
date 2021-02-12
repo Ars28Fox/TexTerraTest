@@ -1,0 +1,43 @@
+.social
+    display flex
+    align-items center
+    @media tablet
+        flex-wrap wrap
+        width 100%
+        max-width 100px
+    @media mobile
+        max-width 100%
+        justify-content space-between
+        margin-top 20px
+        padding 0 5px
+    &__item
+        margin 0 17px;
+        @media tablet
+            width calc(50% - 25px)
+            margin 10px
+        @media mobile
+            width initial
+            margin 0
+    &__link
+        display flex
+        justify-content center
+        align-items center
+    &__icon
+        position: relative;
+        transition all .3s
+        &:hover
+            transform scale(1.4)
+            & path
+                transition all .3s
+            & .social--facebook,
+            & .social--telegram:nth-child(3),
+            & .social--twitter,
+            & .social--medium
+                fill #6188ff
+            & .social--telegram:nth-child(1)
+                fill blue-color
+            & .social--telegram:nth-child(2)
+                fill dark-blue-color
+        &:active
+            opacity 0.5
+    

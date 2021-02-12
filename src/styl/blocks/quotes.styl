@@ -1,0 +1,77 @@
+.quotes
+    display flex
+    padding 109px 0 90px
+    border-bottom 1px solid #d8e3fe
+    background linear-gradient(180deg, #eaf0ff 0%, #f6f9ff 100%)
+    overflow hidden
+    @media desc
+        padding 70px 0 60px
+    @media tablet
+        padding 50px 0 30px
+    @media mobile
+        flex-wrap wrap
+        padding 20px 15px
+    &__desc
+        width 50%
+        max-width 340px
+        margin-top 26px
+        margin-left 276px
+        @media desc
+            margin-top 0
+            margin-left 100px
+        @media tablet
+            margin-left 30px
+        @media mobile
+            width 100%
+            margin-left 0
+            margin-bottom 20px
+            padding 0 10px
+    &__title
+        margin 28px 0 17px
+        font-weight 500
+        @media mobile
+            margin 17px 0
+    &__text
+        width 100%
+        max-width 320px
+        margin 0
+        font-size 13px
+        line-height 23px
+        letter-spacing 0.03em
+        color #a4abc8
+    &__swiper-outer
+        position relative
+        width 50%
+        margin-left auto
+        overflow hidden
+        z-index 2
+        @media mobile
+           width 100%
+           padding 0 10px
+    &__swiper
+        position relative
+        width 100%
+        max-width 423px
+        margin-left 20px
+        overflow visible
+        @media tablet
+            max-width 340px
+        @media mobile
+            max-width 100%
+            margin 0 auto
+    &__slide
+        border 1px solid #d8e3fe
+        box-shadow 0px 5px 50px #f3f5fa,
+        0px 15px 20px #d4dcf1
+        background-color #fff
+    &__swiper-pagination.swiper-pagination-bullets
+        position relative
+        margin-top 75px
+        @media mobile
+            margin-top 50px
+        & .swiper-pagination-bullet
+            margin 0 6px
+            background-color #d1d6e3
+            outline none
+        & .swiper-pagination-bullet-active
+            background-color #5283ff

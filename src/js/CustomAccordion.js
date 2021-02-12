@@ -17,9 +17,5 @@ export default function createAccordion(accordionToggler, accordionContainer) {
 			.children()
 			.find(accordionContainer)
 			.removeClass('active');
-		const thisTargetPosition = thisTarget.parent().position().top;
-		$('html')
-			.stop()
-			.animate({ scrollTop: thisTargetPosition }, 200);
 	});
 }

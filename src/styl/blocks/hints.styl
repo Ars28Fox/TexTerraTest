@@ -1,0 +1,68 @@
+.hints
+    display flex
+    flex-direction column
+    align-items center
+    padding 104px 143px 95px
+    border-bottom 1px solid #d8e3fe
+    @media desc
+        padding 70px 100px
+    @media tablet
+        padding 40px 15px
+    &__title
+        margin 0
+        margin-top 20px
+    &__swiper-outer
+        position relative
+        width 100%
+        max-width 958px
+        margin 92px auto 0
+        border 1px solid #d8e3fe
+        box-shadow 0px 15px 50px #eff4ff
+        @media desc
+            margin 60px auto 0
+        @media tablet
+            margin 40px auto 0
+    &__swiper-pagination.swiper-pagination-bullets
+        position relative
+        margin-top 90px
+        @media desc
+            margin-top 60px
+        @media tablet
+            margin-top 30px
+        & .swiper-pagination-bullet
+            margin 0 6px
+            background-color #d1d6e3
+            outline none
+        & .swiper-pagination-bullet-active
+            background-color #5283ff
+    &__arrow
+        position absolute
+        top 50%
+        transform translateY(-50%)
+        width 23px
+        height 15px
+        margin 0
+        background-size contain
+        background-repeat no-repeat
+        background-position center
+        outline none
+        @media tablet
+            display none
+        &--prev
+            left calc(-23px - 75px)
+            background-image url(../images/slider-arrow-prev.svg)
+            transform-origin right bottom
+            transition all .3s
+            &:hover
+                transform scale(2)
+            @media desc
+                left -7%
+        &--next
+            right calc(-23px - 75px)
+            background-image url(../images/slider-arrow-next.svg)
+            transform-origin left bottom
+            transition transform .3s
+            &:hover
+                transform scale(2)
+            @media desc
+                right -7%

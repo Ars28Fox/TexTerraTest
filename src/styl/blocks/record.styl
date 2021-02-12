@@ -1,0 +1,141 @@
+.record
+    display flex
+    justify-content space-between
+    min-height 394px
+    padding 63px 60px 63px 35px
+    @media desc
+        align-items flex-start
+    @media tablet
+        padding 40px 20px
+    @media mobile
+        flex-wrap wrap
+        padding 30px 15px
+    &__gallery
+        display grid
+        grid-template-columns 1fr 1fr 1fr
+        gap 12.5px
+        width 100%
+        max-width 407px
+        @media desc
+            max-width 50%
+        @media mobile
+            max-width 100%
+            display flex
+            flex-wrap wrap
+            justify-content center
+    &__gallery-item:first-child
+        grid-column 1 / 3
+        grid-row 1 / 3
+    &__gallery-link
+        display flex
+        justify-content center
+        align-items center
+        position relative
+        border-radius 5px
+        box-shadow 0px 15px 100px #e5ebf8
+        overflow hidden
+        outline none
+        & img
+            max-width initial
+            object-fit cover
+            @media mobile
+                max-width 120px
+        &::before
+            content ""
+            position absolute
+            left 50%
+            top 50%
+            transform translate(-50%, -50%)
+            width 65px
+            height 65px
+            background-image url("../images/zoom-icon.svg")
+            background-size contain
+            background-repeat no-repeat
+            background-position center
+            opacity 0
+            transition opacity .5s ease
+        &--small
+            &::before
+                background-size 50%
+        &:hover::before
+            opacity 1
+    &__content
+        display flex
+        flex-direction column
+        width 100%
+        max-width 395px
+        @media desc
+            max-width 50%
+            margin-left 40px
+        @media mobile
+            position relative
+            max-width 100%
+            margin 0
+            margin-top 20px
+            z-index 2
+    &__title
+        margin 0
+        margin-bottom 25px
+    &__text
+        margin 0
+        font-size 14px
+        line-height 27px
+        letter-spacing 0.03em
+    &__buttons
+        display flex
+        margin-top 45px
+        @media mobile
+            flex-wrap wrap
+            justify-content center
+            margin-top 30px
+    &__link
+        width 100%
+        max-width 113px
+        margin-right 8px
+        border-radius 2px
+        color blue-color
+        background-color cloud-color
+        &:hover
+            color #fff
+            background-color deep-blue-color
+        &:active
+            opacity 0.5
+        @media mobile
+            margin 0
+            margin-bottom 10px
+    &__btn
+        width 100%
+        max-width 211px
+        position relative
+        border-radius 2px
+        color #a6b6da
+        z-index 1
+        &::before
+            content ""
+            position: absolute
+            top 15%
+            left 10%
+            height 0%
+            width 2px
+            background-color cloud-color
+            transition all .3s ease
+        &::after
+            content ""
+            position absolute
+            top 15%
+            left 10%
+            height 70%
+            width 0px
+            background-color cloud-color
+            z-index -1
+        &:hover
+            color #7382a3
+            &::before
+                height 70%
+                transition all 0.3s ease
+            &::after
+                width 80%
+                transition all 0.3s ease
+                transition-delay 0.35s
+        &:active
+            opacity 0.5

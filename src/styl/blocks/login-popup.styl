@@ -1,0 +1,139 @@
+.popup-bg
+	height 100%
+	background alpha(#000, .3)
+	opacity 0
+	padding 15px
+	position fixed
+	top 0
+	right 0
+	left 0
+	z-index -1
+	display flex
+	align-items center
+	justify-content center
+	transition all .3s ease
+	@media mobile
+		padding 25px
+	&.open
+		opacity 1
+		visibility visible
+		z-index 10
+
+.login-popup
+	width 100%
+	max-width 500px
+	max-height 100vh
+	overflow auto
+	background #fff
+	border-radius 20px
+	visibility hidden
+	opacity 0
+	position relative
+	display block
+	flex 0 1 auto
+	font-smoothing antialiased !important
+	-webkit-backface-visibility hidden
+	&.open
+		visibility visible
+		opacity 1
+	&.load
+		min-height 160px
+		&:after
+			content ""
+			position absolute
+			top calc(50% - 36px)
+			left calc(50% - 36px)
+	&__wrap
+		position relative
+	&__body
+		padding 40px 60px
+		@media mobile
+			padding 20px 30px
+	&__close
+		cross(blue-color, 30px, 3px)
+		position absolute
+		right 20px
+		top 20px
+		cursor pointer
+		z-index 10
+	&__title
+		margin 0
+		margin-bottom 30px
+		addFont()
+		font-size 43px
+		font-weight 700
+		line-height 54px
+		color blue-color
+		text-align center
+		@media mobile
+			font-size 24px
+			line-height 30px
+	&__input
+		width 100%
+		margin-bottom 15px
+		border none
+		border-radius 5px
+		padding 21px 23px
+		addFont()
+		font-size 13px
+		font-weight 700
+		line-height 17px
+		background-color #EFEFF7
+		color #7A85AD
+		outline none
+		transition .3s
+		&:hover
+			background-color rgba(#808080, 0.2)
+		&:focus
+			background-color rgba(#808080, 0.2)
+			color #495274;
+	&__btn
+		flex-shrink 0
+		width 100%
+		padding-top 21px
+		padding-bottom 21px
+		border-radius 5px
+		box-shadow 0px 5px 15px rgba(116, 104, 255, 0.2)
+		background-color deep-blue-color
+		color #fff
+		&:hover
+			background-color cloud-color
+			color deep-blue-color
+		&:active
+			opacity 0.5
+	&__sucsess
+		display flex
+		flex-direction column
+		justify-content center
+		align-items center
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		padding 0 60px
+		text-align center
+		background-color #fff
+		color blue-color
+		opacity 0
+		visibility hidden
+		z-index 8
+		@media mobile
+			padding 0px 30px
+		&.active
+			opacity 1
+			visibility visible	
+		& span
+			width 100%
+			margin-bottom 7px
+			addFont()
+			font-size 43px
+			font-weight 700
+			line-height 54px
+		& p
+			width 100%
+			margin 0
+			addFont()
+			font-size 25px
+			font-weight 700
+			line-height 32px
