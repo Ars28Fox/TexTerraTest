@@ -6,7 +6,7 @@ Webpack tasks:
 
 [Project page](https://ars28fox.github.io/TexTerraTest/)
 
-Написано с использованием габлонизатора pug, использовался препроцессор stylus, javascript, jquery и сборщик gulp.
+Написано с использованием габлонизатора pug, использовался препроцессор stylus, javascript, jquery и сборщик webpack.
 В ходе тестового задания было реализовано:
 
 * Кроссбраузерная семантичная верстка на HTML 5 (Браузеры Chrome, Safari, Opera, Edge, Firefox).
