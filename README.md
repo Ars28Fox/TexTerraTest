@@ -1,18 +1,20 @@
-Шаблон верстки
-========
+# Тестовое задание в компанию "Текстерра"
 
-### Зависимости
-```bash
-npm i -g webpack || yarn add global webpack
-npm i			 || yarn
-```
+Webpack tasks:
+* npm run build:dev - starting dev
+* npm run build:prod - compile prod
 
-### Сборка
-Девелоп сборка c `browser-sync`:
-```bash
-npm run build:dev  || yarn build:dev
-```
-Продакшн сборка:
-```bash
-npm run build:prod || yarn build:prod
-```
+[Project page](https://ars28fox.github.io/TexTerraTest/)
+
+Написан на чистом html, использовался препроцессор scss, javascript и сборщик gulp.
+В ходе тестового задания было реализовано:
+
+* Кроссбраузерная семантичная верстка на HTML 5 (Браузеры Chrome, Safari, Opera, Edge, Firefox, IE11).
+* Реализована адаптивность под разрешения mobile, tablet, desktop (Применен принцип Mobile-first).
+* Сетка сайта построена с помощью Flexbox модели.
+* Именование класов по БЭМ методологии.
+* Реализована кнопка "наверх".
+* Реализована валидация формы e-mail.
+* Реализовано всплывающее мобильное меню в mobile версии.
+* При клике на сердечко показывается уведомление о добавлении в избранное.
+* Настроен сборщик Gulp в рамках проекта.
